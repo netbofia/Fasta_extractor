@@ -3,13 +3,12 @@ Fasta Sequence extractor
 
 Collection of scripts to extract sequences from fasta files
 
-extract_x_seqs.sh
+<b>extract_x_seqs.sh</b>
+<u>Description</u>: Extracts x consequetive sequences with the given offset
 
-Description: Extracts x consequetive sequences with the given offset
 
+<u>Input</u>: [Fasta file][offset][n_sequences]
 
-Input: [Fasta file][offset][n_sequences]
-
-Output: Standard output
+<u>Output</u>: Standard output
 
 
