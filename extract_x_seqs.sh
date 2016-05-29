@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # extract_x_seqs.sh
 # 
@@ -9,10 +9,13 @@
 
 FILE=$1
 START=$2
+if [[ $START == 0 ]]; then
+    START=1
+fi
 N_SEQS=$(( $3 + $START )) 
 
 #Get dir of this script
-DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+#DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 
 awk -v N_SEQS=$N_SEQS -v START=$START '{ tmp = match($0, /^>.*/)      
   if(tmp){
@@ -29,4 +32,5 @@ awk -v N_SEQS=$N_SEQS -v START=$START '{ tmp = match($0, /^>.*/)
   }
 }' ${FILE}
 
+exit 0 
 
